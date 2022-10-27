@@ -2,7 +2,7 @@ MySQL(データベース)の構築　2022年版(version5.0.5)
 
 MySQL→PHP,Rubyと組み合わせることで会員管理、商品管理、データー分析に使われる。
 
-MAMP構築
+MAMP（MySQL）の構築
 ※MAMPをインストールすることでPHPadminツールが使えて便利。
 
 ステップ
