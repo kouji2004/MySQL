@@ -1,12 +1,19 @@
 SQL 集計
 集計→売上などに使われる
 
+今回は男女の年齢を集計する。
+
+　流れ
+⓵集計（SUM）
+⓶平均（AVG）
+⓷カウント（COUNT）
+
+
 
 集計の基本構文
 SERECT SUM(集計したいカラム。今回は年齢を出したいのでage) FROM テーブル名 GROUP BY カラム（今回は男女の総合計を出すためgender）;
 
-実際のコード
-
+⓵男女それぞれの年齢を集計する
 SELECT SUM(age) FROM uesrs GROUP BY gender;←二つに識別されたが、どっちが女性か男性かが識別できないので
  実行結果 
  SUM(age)	
@@ -15,4 +22,42 @@ SELECT SUM(age) FROM uesrs GROUP BY gender;←二つに識別されたが、ど�
 
 　↓
 以下のコードに変更する
+SELECT gender, SUM(age) FROM uesrs GROUP BY gender;
+ 実行結果
+　gender	
+　SUM(age)	
+　女　10725
+　男　11271
+
+
+
+⓶男女の平均年齢を出す
+ SELECT gender, AVG(age) FROM uesrs GROUP BY gender;
+ 実行結果
+　gender	
+　AVG(age)	
+　女36.7295
+　男36.2412
+
+
+⓷カウント（件数順に綺麗に並べられる）
+SELECT * FROM uesrs ORDER BY id;
+実行結果
+　idが若い順に上から下に並べられる。例、１２３４５
+
+
+⓷-２ カウント
+　SELECT * FROM uesrs ORDER BY id DESC;
+実行結果
+　idが大きい順に並べられる。例5,4,3,2,1
+
+⓷-３ カウント　名前をひらがな順で表示させたい場合
+
+　カラムを追加　→　name_kana　→カラムに振り仮名を記述する
+
+　カラムに振り仮名を記述したら実行する
+
+ SELECT * FROM uesrs ORDER BY kana_name;
+
+
 
