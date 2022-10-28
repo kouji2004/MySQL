@@ -12,3 +12,14 @@ SELECT  * FROM uesrs WHERE id=5;
 
 
 予備知識　全部のカラムを検索したい場合はアスタリスク（*）を使う
+
+
+
+編集の方法
+
+構文
+SELECT  * FROM テーブル名 WHERE カラム名<条件式; 
+
+例
+SELECT  * FROM uesrs WHERE age<20; 20歳未満を検索表示する
+SELECT  * FROM uesrs WHERE age>20; 20歳以上を検索表示する
