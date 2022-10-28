@@ -9,3 +9,22 @@ UPDATE テーブル名 SET カラム名 = "" WHERE id = 数字が入る;
 
 例１
 UPDATE uesrs SET email="aiueo@com.jp" WHERE id =1;
+
+UPDATE uesrs SET email="aiueo@com.jp",age=12 WHERE id =1;
+
+WHERE →　条件式　〇〇と等しい
+
+
+削除の構文
+DELETE FROM テーブル名 WHERE id =1;
+
+
+例1
+DELETE FROM uesrs WHERE id =1;
+
+WHERE　→ 条件式　〇〇と等しい
+
+
+
+予備知識
+更新と削除も最後にWHERE id =1;を記述する
