@@ -45,4 +45,8 @@ BETWEEN　→ 20 AND 50と記述することで　20～50歳未満を検索し�
 
 
 ④部分検索(LIKE)
-SELECT  * FROM uesrs WHERE name LIKE "三浦%";
+SELECT  * FROM uesrs WHERE name LIKE "三浦%";　三浦からはじめる人を検索してくれる
+SELECT  * FROM uesrs WHERE name LIKE "%三%"; 前半と後半に三が入っている人を検索表示する
+
+予備知識
+% = ワイルドカード
