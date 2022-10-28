@@ -5,6 +5,7 @@
 　.⓶IN
 　.⓷BETWEEN
 　.④LIKE(部分検索)
+　.⑤論理演算検索
 
 ⓵検索構文
 SELECT id, 検索したいカラム名 FROM テーブル名 WHERE id=5;
@@ -50,3 +51,23 @@ SELECT  * FROM uesrs WHERE name LIKE "%三%"; 前半と後半に三が入って�
 
 予備知識
 % = ワイルドカード
+
+
+⑤論理検索
+SELECT  * FROM uesrs WHERE name LIKE "%三%" AND age>20; 三が入って20歳以上の人を表示する
+SELECT  * FROM uesrs WHERE name LIKE "%三%" AND (age>20 OR gender="女");　三が入っている名前（男女）を検索して、さらにその中から20歳以上、女性を検索する。
+
+
+
+ひっかけ問題
+SELECT  * FROM uesrs WHERE name LIKE "%三%" AND age>20 OR gender="女";
+ 実行結果 女性しか表示されない。なぜなら ORを単独で使っているから
+　　　 　　↓　　　　　　　　　　↓
+ OR を使って論理演算をしたい場合は(age>20 OR gender)のように()で括る必要がある。
+　　 　　　↓　　　　　　　　　　↓
+解決策　
+SELECT  * FROM uesrs WHERE name LIKE "%三%" AND (age>20 OR gender="女");
+
+
+予備知識
+OR 単独で使ってしまうとORから後しか表示しない。　()をつける。
