@@ -1,6 +1,6 @@
 検索（SELECT）構文と WHEREの条件
 
-構文
+検索構文
 SELECT id, 検索したいカラム名 FROM テーブル名 WHERE id=5;
 
 例1
@@ -14,12 +14,27 @@ SELECT  * FROM uesrs WHERE id=5;
 予備知識　全部のカラムを検索したい場合はアスタリスク（*）を使う
 
 
+条件検索のやりかた
 
-編集の方法
-
-構文
+条件式構文
 SELECT  * FROM テーブル名 WHERE カラム名<条件式; 
 
 例
 SELECT  * FROM uesrs WHERE age<20; 20歳未満を検索表示する
 SELECT  * FROM uesrs WHERE age>20; 20歳以上を検索表示する
+
+
+条件式（IN）
+SELECT  * FROM uesrs WHERE age IN(20,30,50);
+
+予備知識
+IN →　()の中に複数の条件を記述できる。
+　　　  ピンポイントで検索できる
+
+条件式(BETWEEN)
+SELECT  * FROM uesrs WHERE age BETWEEN 20 AND 50; 20歳から50歳未満を検索表示する
+
+予備知識
+BETWEEN　→ 20 AND 50と記述することで　20～50歳未満を検索してくれる。
+
+
