@@ -1,0 +1,11 @@
+SQL　更新と削除の方法
+使用したサイト（tm web Tools）　https://tm-webtools.com/Tools/TestData
+
+tm web Toolsを使ってテキストデータを作成する。
+出力フォーマットはCSVに設定
+
+更新（UPDATE）の構文
+UPDATE テーブル名 SET カラム名 = "" WHERE id = 数字が入る;
+
+例１
+UPDATE uesrs SET email="aiueo@com.jp" WHERE id =1;
