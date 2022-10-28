@@ -1,0 +1,14 @@
+検索（SELECT）構文と WHEREの条件
+
+構文
+SELECT id, 検索したいカラム名 FROM テーブル名 WHERE id=5;
+
+例1
+SELECT id, name FROM uesrs WHERE id=5;
+　実行結果　→ 5　相良 恵美
+ 
+SELECT  * FROM uesrs WHERE id=5; 
+　実行結果→　5　相良 恵美　ymJyWktUbQ@example.com　女　2018-01-13　4
+
+
+予備知識　全部のカラムを検索したい場合はアスタリスク（*）を使う
