@@ -6,7 +6,8 @@ SQL 集計
 　流れ
 ⓵集計（SUM）
 ⓶平均（AVG）
-⓷カウント（COUNT）
+⓷カウント（COUNT）IDが若い順大きい順に表示、　名前あ行からわ行の順に表示する
+⓸ページネーション（LIMIT）
 
 
 
@@ -60,4 +61,9 @@ SELECT * FROM uesrs ORDER BY id;
  SELECT * FROM uesrs ORDER BY kana_name;
 
 
+⓸ページネーション（LIMIT）
+SERECT * FROM uesrs ORDER BY name_kanaLIMIT 10;
+
+実行結果
+　上から10件だけ表示する
 
