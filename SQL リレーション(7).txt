@@ -1,0 +1,8 @@
+リレーション
+
+流れ　
+PHPMyAdminのmessages（これは自分で作成したテーブル）をクリック
+SQLをクリック
+テーブルを作る
+ ↓
+CREATE TABLE tweets(id INT PRIMARY KEY AUTO_INCREMENT, tweet TEXT);
