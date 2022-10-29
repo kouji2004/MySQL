@@ -1,8 +1,22 @@
 リレーション
 
 流れ　
-PHPMyAdminのmessages（これは自分で作成したテーブル）をクリック
-SQLをクリック
-テーブルを作る
+⓵PHPMyAdminのmessages（これは自分で作成したテーブル）をクリック
+⓶SQLをクリック
+⓷テーブルを作る
  ↓
 CREATE TABLE tweets(id INT PRIMARY KEY AUTO_INCREMENT, tweet TEXT);
+
+⓸tweetsをクリックし構造をクリック
+⓹AUTO_INCREMENTになっているか確認
+⓺SQLをクリックしツイートする
+　↓
+INSERT INTO tweets SET tweet="こんにちは";
+※このままでは、だれが投稿したか分からない。
+
+⓻構造をクリックしカラムを追加する。→　誰が投稿したか分かるようにnameカラムを追加する。タイプ:VARCHARA　長さ:100文字
+⓼カラムを追記する　　　　　　　→　いつ投稿したか分かるようにcreated_atを追加する。　タイプ:DATETIME デフォルト値:CURRENT_TIMES
+※CURRENT_TIMESは投稿したその時間を記録してくれる。
+　DATETIMEは時間と日付けを記録してくれる。
+
+⓽カラムを追加する　　　　　　　→カラム名 updated_at タイプ:TIMESTAMP  デフォルト値:CURRENT_TIMES　属性:on update CURRENT_TIMESTAMP
