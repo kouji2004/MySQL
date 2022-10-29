@@ -2,17 +2,17 @@
 
 流れ　
 ⓵PHPMyAdminのmessages（これは自分で作成したテーブル）をクリック
-⓶SQLをクリック
+⓶SQLをクリックして
 ⓷テーブルを作る
  ↓
 CREATE TABLE tweets(id INT PRIMARY KEY AUTO_INCREMENT, tweet TEXT);
 
-⓸tweetsをクリックし構造をクリック
+⓸tweetsをクリックし構造をクリックして
 ⓹AUTO_INCREMENTになっているか確認
 ⓺SQLをクリックしツイートする
 　↓
 INSERT INTO tweets SET tweet="こんにちは";
-※このままでは、だれが投稿したか分からない。
+※このままでは、だれが投稿したか分からないから新しいカラムを追加する必要がある。
 
 ⓻構造をクリックしカラムを追加する。→　誰が投稿したか分かるようにnameカラムを追加する。タイプ:VARCHARA　長さ:100文字
 ⓼カラムを追記する　　　　　　　→　いつ投稿したか分かるようにcreated_atを追加する。　タイプ:DATETIME デフォルト値:CURRENT_TIMES
