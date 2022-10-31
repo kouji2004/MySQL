@@ -1,0 +1,19 @@
+複数のカラムの取得
+SELECT カラム名、カラム名　FROM テーブル名;
+例、SELECT name、age　FROM users;
+
+実行結果
+テーブル名　users
+カラム ミウラ、1歳
+
+
+全カラムを取得
+SELECT *(アスタリスク)　FROM テーブル名;
+例、SELECT *　FROM users;
+
+実行結果
+テーブル名　users
+カラム ミウラ、1歳,男,L型
+
+
+
