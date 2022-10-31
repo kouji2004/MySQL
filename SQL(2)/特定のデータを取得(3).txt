@@ -1,0 +1,6 @@
+特定のデータを取得(WHERE)
+
+SELECT * FROM テーブル名 WHERE カラム名="食費";
+
+例、
+SELECT * FROM users WHERE name="ミウラ";
