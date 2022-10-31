@@ -1,1 +1,16 @@
 1歳以上のデータを取得
+
+SELECT * FROM テーブル名　WHERE カラム名>=数字;
+
+例
+SELECT * FROM users　WHERE age >= 1;
+
+
+予備知識
+>= 以上
+<= 未満
+
+
+演習問題
+1歳未満のデータを取得
+SELECT * FROM users　WHERE age <= 1;
