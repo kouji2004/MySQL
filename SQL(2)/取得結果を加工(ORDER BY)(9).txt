@@ -1,0 +1,33 @@
+ORDER BY
+データを並び替えるためには、「〜順に並べる」という意味の「ORDER BY」を用いる
+
+「ORDER BY」の並べ方は、「昇順」か「降順」を指定
+
+「昇順」は「小さい数から大きい数へ向かう順序」、「降順」は「大きい数から小さい数へ向かう順序」
+
+SQLでは「昇順」は「ASC」、「降順」は「DESC」と指定
+
+「ORDER BY」は「WHERE」と併用することが可能
+
+
+降順（DESC）
+SELECT *
+FROM users
+ORDER BY age DESC;
+
+
+昇順(ASC)
+SELECT *
+FROM users
+ORDER BY age ASC;
+
+昇順(ASC)+WHERE(カラムを特定)を使って
+SELECT *
+FROM users
+WHERE name = "ミウラ"
+ORDER BY age ASC;
+
+
+
+
+
