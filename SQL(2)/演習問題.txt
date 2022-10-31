@@ -1,11 +1,36 @@
 演習問題
 
-比較演算子を用いて、特定のデータを取得する
+⓵比較演算子を用いて、特定のデータを取得する
 SELECT *
 FROM users(テーブル名)
 WHERE name(カラム名) = "ミウラ";
 
-LIKE演算子を用いて
+⓶LIKE演算子を用いて
 SELECT *
 FROM users(テーブル名)
 WHERE name LIKE "%ミウラ%";
+
+
+⓷IS NULLを用いて
+SELECT *
+FROM users(テーブル名)
+WHERE IS NULL price="NULL";
+
+
+⓸ORDER BYとLIMITを用いて
+SELECT *
+FROM users(テーブル名)
+ORDER BY age(カラム名) DESC
+LIMIT 5;
+
+
+⓹IS NULLを用いて
+SELECT *
+FROM users(テーブル名)
+WHERE name IS NULL ;
+
+⓺AND演算子を用いて
+SELECT *
+FROM users(テーブル名)
+WHERE name = "ミウラ" AND age="18";
+
