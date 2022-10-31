@@ -1,2 +1,8 @@
 LIKE演算子では「％」をワイルドカードとして扱う
 
+SELECT * FROM テーブル名 WHERE カラム名 = "%〇〇%";
+
+例
+SELECT * FROM users WHERE name = "%三%";
+実行結果
+ミウラ
