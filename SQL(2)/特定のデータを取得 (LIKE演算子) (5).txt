@@ -1,9 +1,9 @@
 LIKE演算子では「％」をワイルドカードとして扱う
 
-SELECT * FROM テーブル名 WHERE カラム名 "%〇〇%";
+SELECT * FROM テーブル名 WHERE カラム名 LIKE "%〇〇%";
 
 例
-SELECT * FROM users WHERE name "%三%";
+SELECT * FROM users WHERE name LIKE "%三%";
 実行結果
 ミウラ
 
@@ -12,10 +12,22 @@ SELECT * FROM users WHERE name "%三%";
 前方一致 〇〇% 〇〇で始まる
 後方一致  %〇〇 〇〇で終わる
 
-演習問題
+演習問題１（前方一致）
+SELECT * FROM テーブル名 WHERE name LIKE "ミウラ%";
+実行結果
+ミウラ〇
+三浦ミウラ✕
+ミウラコウジ〇
+解説：前方一致の為、ミウラから後ろは〇〇と含まれない
+　　前方一致　→　ミウラ〇〇
+
+
+演習問題２（後方一致）
 SELECT * FROM テーブル名 WHERE name LIKE "ミウラ%";
 実行結果
 ミウラ〇
 三浦ミウラ〇
 ミウラコウジ✕
-解説前方一致の為、ミウラから後ろは〇〇と含まれない
+解説：後方一致の為、ミウラから前は〇〇と含まれない
+　　後方一致　→　〇〇ミウラ
+

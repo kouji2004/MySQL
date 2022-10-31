@@ -1,0 +1,19 @@
+NULLのデータを取得
+⓵指定したカラムがNULLである
+　SELECT * FROM テーブル名 WHERE カラム名 IS NULL;
+例
+　SELECT * FROM users WHERE name IS NULL;
+
+⓶NULLではないデータ
+SELECT * FROM テーブル名 WHERE カラム名 IS NOT NULL;
+例
+　SELECT * FROM users WHERE name IS NOT NULL;
+
+⓷「NULLのデータ」や「NULLでないデータ」を取得して使うことができない
+例
+ SELECT * FROM テーブル名 WHERE name=NULL;　→NULLを取得して使用できない
+ SELECT * FROM テーブル名 WHERE NOT name=NULL; →NULLを取得して使用できない
+
+予備知識
+「カラム名 IS NULL」とすることで、「指定したカラムがNULLであるデータ」を取得
+「カラム名 IS NOT NULL」とすることで、「NULLではないデータ」を取得
