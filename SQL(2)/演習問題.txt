@@ -1,0 +1,11 @@
+演習問題
+
+比較演算子を用いて、特定のデータを取得する
+SELECT *
+FROM users(テーブル名)
+WHERE name(カラム名) = "ミウラ";
+
+LIKE演算子を用いて
+SELECT *
+FROM users(テーブル名)
+WHERE name LIKE "%ミウラ%";
