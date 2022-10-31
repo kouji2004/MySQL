@@ -1,2 +1,24 @@
 否定の条件でデータを取得(NOT演算子)
+
 「〇〇を含まないデータ」や「〇〇に一致しないデータ」のような条件でデータを取得したい場合は「否定」を意味する「NOT演算子」を用いる。
+
+演算子の前に「NOT」を置くことで、その条件を満たさないデータを取得する
+
+
+コード
+SELECT カラム名 FROM テーブル名 WHERE NOT カラム名 = "〇〇"
+→条件に未達成なものを出力する。
+
+例1
+SELECT name 
+FROM users 
+WHERE NOT name ="ミウラ";
+
+
+例2　LIKEを使って
+SELECT *
+FROM users 
+WHERE NOT name LIKE  "%ミウラ%";
+
+
+
