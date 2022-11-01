@@ -1,2 +1,17 @@
 DISTINCT(重複したデータを省こう)
 DISTINCTを用いると、検索結果から重複するデータを除くことが可能
+
+DISTINCTのコード
+SELECT DISTINCT(カラム名)
+FROM テーブル名;
+
+例
+テーブル　users
+カラム　　ミウラ　ミウラ　マツキ　タカハシ　→ミウラが重複している
+
+SELECT DISTINCT(name)
+FROM users;
+
+実行結果
+ミウラ　マツキ　タカハシ
+重複した名前を省くことが可能となる。
