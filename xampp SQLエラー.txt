@@ -1,5 +1,8 @@
 SQLをクリックstartしても直ぐに自動でストップされる。
 
+参考にしたサイト
+→　https://www.bing.com/videos/search?q=+%5bmysql%5d+%09entire+log+window+on+the+forums&&view=detail&mid=FF35C0035D3B37135EA7FF35C0035D3B37135EA7&&FORM=VRDGAR&ru=%2Fvideos%2Fsearch%3Fq%3D%2B%255bmysql%255d%2B%2509entire%2Blog%2Bwindow%2Bon%2Bthe%2Bforums%26FORM%3DHDRSC3
+
 ファイル→(フォルダー)
 
 流れ 
@@ -22,6 +25,10 @@ SQLをクリックstartしても直ぐに自動でストップされる。
 ⓻dateファイルを開いて、先ほどコピーしたファイルに置き換える（上書き）
 
 ⓼date_oldファイルを開き
-　ibdata1をコピーする
+　ibdata1をコピーして
 
-⓽
+⓽dateファイルを開き先ほどコピーしたibdata1に置き換える（上書き）
+
+
+
+
